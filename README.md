@@ -10,7 +10,7 @@ You can achieve this with Yarn capacity scheduler by doing following
 2.	Create a low priority queue with capacity ~30% and max capacity to 100%
 
 
-With these settings, High priority queue queue would always get ~70% of the cluster if it needs it and the second queue would only get a ~30 % of the cluster if the high priority queues have jobs. The low priority queue would still be able to monopolize the cluster but it will take longer when high priority jobs are running.
+With these settings, High priority queue queue would always get ~70% of the cluster if it needs it and the second queue would only get a ~30 % of the cluster if the high priority queues have jobs. The low priority queue would still be able to optimize the cluster but it will take longer when high priority jobs are running.
 
 <h1>How to parse hive queries programmatically </h1>
 
