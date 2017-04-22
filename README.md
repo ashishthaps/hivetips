@@ -12,11 +12,9 @@ You can achieve this with Yarn capacity scheduler by doing following
 
 With these settings, High priority queue queue would always get ~70% of the cluster if it needs it and the second queue would only get a ~30 % of the cluster if the high priority queues have jobs. The low priority queue would still be able to monopolize the cluster but it will take longer when high priority jobs are running.
 
-<h1>Hhow to parse hive queries programmatically </h1>
+<h1>How to parse hive queries programmatically </h1>
 
 In java, you can use Hive ParseDriver (https://github.com/apache/hive/blob/master/ql/src/java/org/apache/hadoop/hive/ql/parse/ParseDriver.java) which will give you each statement and give you complete ParseTree.
-
-You can look for a simple example in this codeflow : http://codeflow/Dashboard/review/display/dkakadia-ceb4c71c8b1a462b8276187df4637009
 
 You need following in your Maven pom.xml
 
