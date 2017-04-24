@@ -24,3 +24,23 @@ You need following in your Maven pom.xml
             <version>${hive.version}</version>
 </dependency>
 
+</h1> Resource Needs </h1>
+Sorting & Partitioning is CPU heavy 
+Spilling to disk: Reduce this by adding more memory , adds time to process the data
+Serialization & Deserializing - More serializarion and desirialization will add to the CPU cost so avoid them if not needed
+Network Traffic
+Merging
+Lockstep
+Partition Multiplier
+
+Problem: 
+
+In some companies the view is a way of life and in fact I have seen many companies have views that are multiple levels deep.  All in the effort to add security or to consolidate logic, which is all good but for the problem of when those views contain joins.  See the problem is if you have a hive view that contains joins that join is executed every time that view is accessed.  If that join requires a shuffle then you are reordering and partitioning that data every time you access that view.  Which in the end is a lot of repeated work that consumed your CPUs that could have been used for something else.
+
+
+
+Answer: 
+
+The easy answer is the materialized view.  The idea here is storage is cheaper than time or CPU.  So if your data updates daily and it gets queried 100 times a day, then a materialized view can reduce the shuffle cost by 99%.  If you data changes in a more real time fashion then making materialized view become much harder, but still may have value in some cases.
+
+
