@@ -1,0 +1,5 @@
+
+hadoop distcp wasb://hadooptpcds@ashishthtpcds36store.blob.core.windows.net/HiveTPCDS wasb://llap@tpcdsashishthstore.blob.core.windows.net/hive
+
+If you want to do it faster
+hadoop distcp -m 100 wasb://hadooptpcds@ashishthtpcds36store.blob.core.windows.net/HiveTPCDS wasb://llap@tpcdsashishthstore.blob.core.windows.net/hive
