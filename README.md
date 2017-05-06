@@ -43,4 +43,7 @@ Answer:
 
 The easy answer is the materialized view.  The idea here is storage is cheaper than time or CPU.  So if your data updates daily and it gets queried 100 times a day, then a materialized view can reduce the shuffle cost by 99%.  If you data changes in a more real time fashion then making materialized view become much harder, but still may have value in some cases.
 
+## distcp
 
+
+hadoop distcp wasb://hadooptpcds@ashishthtpcds36store.blob.core.windows.net/HiveTPCDS wasb://llap@tpcdsashishthstore.blob.core.windows.net/hive
