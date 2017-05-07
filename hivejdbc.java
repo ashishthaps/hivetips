@@ -6,7 +6,7 @@ import java.sql.SQLException;
         import java.sql.Statement;
         import java.sql.DriverManager;
 /**
- * Hello world!
+ * JDBC to HS2
  *
  */
 public class App 
